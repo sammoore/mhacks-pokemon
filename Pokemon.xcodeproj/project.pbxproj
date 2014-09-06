@@ -29,6 +29,12 @@
 		22A9E5A919BAC21E003194FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E5A819BAC21E003194FF /* SystemConfiguration.framework */; };
 		22A9E5AB19BAC280003194FF /* GeoFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E5AA19BAC280003194FF /* GeoFire.framework */; };
 		22A9E5AF19BAC52C003194FF /* PokeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5AE19BAC52C003194FF /* PokeAPI.m */; };
+		22A9E5C119BACCC8003194FF /* Underscore+Strings.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5B419BACCC8003194FF /* Underscore+Strings.m */; };
+		22A9E5C219BACCC8003194FF /* USStringWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5B619BACCC8003194FF /* USStringWrapper.m */; };
+		22A9E5C319BACCC8003194FF /* Underscore+Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5B819BACCC8003194FF /* Underscore+Functional.m */; };
+		22A9E5C419BACCC8003194FF /* Underscore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5BB19BACCC8003194FF /* Underscore.m */; };
+		22A9E5C519BACCC8003194FF /* USArrayWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5BD19BACCC8003194FF /* USArrayWrapper.m */; };
+		22A9E5C619BACCC8003194FF /* USDictionaryWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5C019BACCC8003194FF /* USDictionaryWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +76,20 @@
 		22A9E5AA19BAC280003194FF /* GeoFire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GeoFire.framework; sourceTree = "<group>"; };
 		22A9E5AD19BAC52C003194FF /* PokeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokeAPI.h; sourceTree = "<group>"; };
 		22A9E5AE19BAC52C003194FF /* PokeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokeAPI.m; sourceTree = "<group>"; };
+		22A9E5B319BACCC8003194FF /* Underscore+Strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Underscore+Strings.h"; sourceTree = "<group>"; };
+		22A9E5B419BACCC8003194FF /* Underscore+Strings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Underscore+Strings.m"; sourceTree = "<group>"; };
+		22A9E5B519BACCC8003194FF /* USStringWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USStringWrapper.h; sourceTree = "<group>"; };
+		22A9E5B619BACCC8003194FF /* USStringWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USStringWrapper.m; sourceTree = "<group>"; };
+		22A9E5B719BACCC8003194FF /* Underscore+Functional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Underscore+Functional.h"; sourceTree = "<group>"; };
+		22A9E5B819BACCC8003194FF /* Underscore+Functional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Underscore+Functional.m"; sourceTree = "<group>"; };
+		22A9E5B919BACCC8003194FF /* Underscore-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Underscore-Prefix.pch"; sourceTree = "<group>"; };
+		22A9E5BA19BACCC8003194FF /* Underscore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Underscore.h; sourceTree = "<group>"; };
+		22A9E5BB19BACCC8003194FF /* Underscore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Underscore.m; sourceTree = "<group>"; };
+		22A9E5BC19BACCC8003194FF /* USArrayWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USArrayWrapper.h; sourceTree = "<group>"; };
+		22A9E5BD19BACCC8003194FF /* USArrayWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USArrayWrapper.m; sourceTree = "<group>"; };
+		22A9E5BE19BACCC8003194FF /* USConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USConstants.h; sourceTree = "<group>"; };
+		22A9E5BF19BACCC8003194FF /* USDictionaryWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USDictionaryWrapper.h; sourceTree = "<group>"; };
+		22A9E5C019BACCC8003194FF /* USDictionaryWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USDictionaryWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +163,7 @@
 		22A9E56B19BAB7C9003194FF /* Pokemon */ = {
 			isa = PBXGroup;
 			children = (
+				22A9E5B019BACCBE003194FF /* Dependencies */,
 				22A9E5AC19BAC502003194FF /* Models */,
 				22A9E57419BAB7C9003194FF /* AppDelegate.h */,
 				22A9E57519BAB7C9003194FF /* AppDelegate.m */,
@@ -191,6 +212,43 @@
 				22A9E5AE19BAC52C003194FF /* PokeAPI.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		22A9E5B019BACCBE003194FF /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				22A9E5B119BACCC8003194FF /* Underscore */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		22A9E5B119BACCC8003194FF /* Underscore */ = {
+			isa = PBXGroup;
+			children = (
+				22A9E5B219BACCC8003194FF /* Strings */,
+				22A9E5B719BACCC8003194FF /* Underscore+Functional.h */,
+				22A9E5B819BACCC8003194FF /* Underscore+Functional.m */,
+				22A9E5B919BACCC8003194FF /* Underscore-Prefix.pch */,
+				22A9E5BA19BACCC8003194FF /* Underscore.h */,
+				22A9E5BB19BACCC8003194FF /* Underscore.m */,
+				22A9E5BC19BACCC8003194FF /* USArrayWrapper.h */,
+				22A9E5BD19BACCC8003194FF /* USArrayWrapper.m */,
+				22A9E5BE19BACCC8003194FF /* USConstants.h */,
+				22A9E5BF19BACCC8003194FF /* USDictionaryWrapper.h */,
+				22A9E5C019BACCC8003194FF /* USDictionaryWrapper.m */,
+			);
+			path = Underscore;
+			sourceTree = "<group>";
+		};
+		22A9E5B219BACCC8003194FF /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				22A9E5B319BACCC8003194FF /* Underscore+Strings.h */,
+				22A9E5B419BACCC8003194FF /* Underscore+Strings.m */,
+				22A9E5B519BACCC8003194FF /* USStringWrapper.h */,
+				22A9E5B619BACCC8003194FF /* USStringWrapper.m */,
+			);
+			path = Strings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,9 +351,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A9E5C519BACCC8003194FF /* USArrayWrapper.m in Sources */,
+				22A9E5C619BACCC8003194FF /* USDictionaryWrapper.m in Sources */,
+				22A9E5C219BACCC8003194FF /* USStringWrapper.m in Sources */,
+				22A9E5C419BACCC8003194FF /* Underscore.m in Sources */,
 				22A9E57619BAB7C9003194FF /* AppDelegate.m in Sources */,
+				22A9E5C319BACCC8003194FF /* Underscore+Functional.m in Sources */,
 				22A9E5AF19BAC52C003194FF /* PokeAPI.m in Sources */,
 				22A9E57219BAB7C9003194FF /* main.m in Sources */,
+				22A9E5C119BACCC8003194FF /* Underscore+Strings.m in Sources */,
 				22A9E59C19BAC070003194FF /* RootTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
