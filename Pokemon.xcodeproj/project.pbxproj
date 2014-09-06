@@ -37,7 +37,6 @@
 		22A9E5C619BACCC8003194FF /* USDictionaryWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5C019BACCC8003194FF /* USDictionaryWrapper.m */; };
 		22A9E5C919BB13E6003194FF /* PokedexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5C819BB13E6003194FF /* PokedexViewController.m */; };
 		22A9E5CB19BB2F28003194FF /* pokedex.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E5CA19BB2F28003194FF /* pokedex.json */; };
-		22A9E5CF19BB3493003194FF /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5CE19BB3493003194FF /* JSONKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,8 +95,6 @@
 		22A9E5C719BB13E6003194FF /* PokedexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokedexViewController.h; sourceTree = "<group>"; };
 		22A9E5C819BB13E6003194FF /* PokedexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokedexViewController.m; sourceTree = "<group>"; };
 		22A9E5CA19BB2F28003194FF /* pokedex.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pokedex.json; sourceTree = "<group>"; };
-		22A9E5CD19BB3493003194FF /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		22A9E5CE19BB3493003194FF /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,7 +225,6 @@
 		22A9E5B019BACCBE003194FF /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				22A9E5CC19BB348B003194FF /* JSONKit */,
 				22A9E5B119BACCC8003194FF /* Underscore */,
 			);
 			name = Dependencies;
@@ -261,15 +257,6 @@
 				22A9E5B619BACCC8003194FF /* USStringWrapper.m */,
 			);
 			path = Strings;
-			sourceTree = "<group>";
-		};
-		22A9E5CC19BB348B003194FF /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				22A9E5CD19BB3493003194FF /* JSONKit.h */,
-				22A9E5CE19BB3493003194FF /* JSONKit.m */,
-			);
-			name = JSONKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,7 +362,6 @@
 			files = (
 				22A9E5C519BACCC8003194FF /* USArrayWrapper.m in Sources */,
 				22A9E5C619BACCC8003194FF /* USDictionaryWrapper.m in Sources */,
-				22A9E5CF19BB3493003194FF /* JSONKit.m in Sources */,
 				22A9E5C219BACCC8003194FF /* USStringWrapper.m in Sources */,
 				22A9E5C419BACCC8003194FF /* Underscore.m in Sources */,
 				22A9E57619BAB7C9003194FF /* AppDelegate.m in Sources */,

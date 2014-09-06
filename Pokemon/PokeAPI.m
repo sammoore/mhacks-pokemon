@@ -7,7 +7,6 @@
 //
 
 #import "PokeAPI.h"
-#import "JSONKit.h"
 
 // SM: TODO: refactor obvi
 
@@ -107,9 +106,10 @@ const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
     NSError *error = nil;
     NSData *response = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pokedex" ofType:@"json"]];
     
-    NSArray *dictionary = [[JSONDecoder decoder] objectWithData:response];
+    NSArray *dictionary = [NSJSONSerialization JSONObjectWithData:response options:kNilOptions error:&error];
     
     NSLog(@"%@", dictionary);
+    NSLog(@"%@", [dictionary[7] objectForKey:@"name"]);
     
     if (error) {
         NSLog(@"%@", error);
