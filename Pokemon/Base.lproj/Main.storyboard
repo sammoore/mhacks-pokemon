@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Item 1-->
+        <!--View Controller - Pokédex-->
         <scene sceneID="nby-ic-Lm4">
             <objects>
                 <viewController id="46H-yG-egX" sceneMemberID="viewController">
@@ -15,19 +15,54 @@
                     <view key="view" contentMode="scaleToFill" id="a40-22-bxe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pokedex" translatesAutoresizingMaskIntoConstraints="NO" id="znl-rS-ZOe">
+                                <rect key="frame" x="0.0" y="0.0" width="329" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="AaN-2U-tP8"/>
+                    <tabBarItem key="tabBarItem" title="Pokédex" id="AaN-2U-tP8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7IN-bL-gsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="654" y="-729"/>
         </scene>
+        <!--Table View Controller - Pokémon-->
+        <scene sceneID="nU4-M6-c40">
+            <objects>
+                <tableViewController id="ZL4-CC-gcH" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BjD-VJ-Vvc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Vci-ug-Zzs">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vci-ug-Zzs" id="OWb-de-siO">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZL4-CC-gcH" id="XIs-cI-PyZ"/>
+                            <outlet property="delegate" destination="ZL4-CC-gcH" id="xfx-0G-Bch"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Pokémon" id="VPh-I9-Mdp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4U-9k-SjB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="-69"/>
+        </scene>
         <!--Root Tab Bar View Controller-->
         <scene sceneID="vlB-hp-x23">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="6ks-8m-AhP" customClass="RootTabBarViewController" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Vfn-2c-15D">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -35,35 +70,45 @@
                     </tabBar>
                     <connections>
                         <segue destination="46H-yG-egX" kind="relationship" relationship="viewControllers" id="30T-bM-Dj2"/>
-                        <segue destination="WyS-3P-nVM" kind="relationship" relationship="viewControllers" id="HG8-Az-WRK"/>
-                        <segue destination="v7A-Ez-Jfe" kind="relationship" relationship="viewControllers" id="pFU-Qh-3AQ"/>
-                        <segue destination="gK0-FA-ZUh" kind="relationship" relationship="viewControllers" id="fvJ-xI-g4O"/>
+                        <segue destination="ZL4-CC-gcH" kind="relationship" relationship="viewControllers" id="mGr-yh-JGP"/>
+                        <segue destination="jO9-Y2-rZz" kind="relationship" relationship="viewControllers" id="YxT-x4-TJE"/>
+                        <segue destination="gK0-FA-ZUh" kind="relationship" relationship="viewControllers" id="yYx-9B-sz3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41J-kQ-3dQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-78" y="306"/>
         </scene>
-        <!--View Controller - Item 2-->
-        <scene sceneID="BKO-9E-zST">
+        <!--Table View Controller - Nearby-->
+        <scene sceneID="BhB-gv-ac0">
             <objects>
-                <viewController id="WyS-3P-nVM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cLx-uJ-vOp"/>
-                        <viewControllerLayoutGuide type="bottom" id="g0K-sv-POZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="48L-Eg-5ln">
+                <tableViewController id="jO9-Y2-rZz" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7cW-0I-cNB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="EZe-MD-gNe"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PQI-K6-9Df" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="WXp-s8-mMe">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WXp-s8-mMe" id="6wj-DQ-7w2">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jO9-Y2-rZz" id="e8M-ex-IqI"/>
+                            <outlet property="delegate" destination="jO9-Y2-rZz" id="Gx7-xd-c36"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Nearby" id="8U3-7c-GYn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaW-5T-Amt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654" y="-76"/>
+            <point key="canvasLocation" x="654" y="595"/>
         </scene>
-        <!--View Controller - Item-->
+        <!--View Controller - Pokémap-->
         <scene sceneID="Q4q-WW-7Jb">
             <objects>
                 <viewController id="gK0-FA-ZUh" sceneMemberID="viewController">
@@ -74,34 +119,25 @@
                     <view key="view" contentMode="scaleToFill" id="nTK-4N-F5j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pokemap" translatesAutoresizingMaskIntoConstraints="NO" id="eQR-I7-Sbl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Upr-6I-6dE"/>
+                    <tabBarItem key="tabBarItem" title="Pokémap" id="Upr-6I-6dE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aac-sr-bkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="654" y="1258"/>
         </scene>
-        <!--View Controller - Item-->
-        <scene sceneID="PfE-te-L8C">
-            <objects>
-                <viewController id="v7A-Ez-Jfe" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Pfi-2j-RYh"/>
-                        <viewControllerLayoutGuide type="bottom" id="9vN-Uh-Dc7"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Kgt-Ew-h7k">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="NEc-xC-6JP"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hsl-Kx-JC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="654" y="586"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="pokedex" width="640" height="960"/>
+        <image name="pokemap" width="640" height="960"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
