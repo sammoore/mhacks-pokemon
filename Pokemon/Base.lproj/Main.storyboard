@@ -57,7 +57,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" title="Pokédex" id="AaN-2U-tP8"/>
+                    <tabBarItem key="tabBarItem" title="Pokédex" image="pokedex-icon" id="AaN-2U-tP8"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="descriptionTextView" destination="Co8-Oa-ZZX" id="d71-uz-4Rs"/>
@@ -92,7 +92,7 @@
                             <outlet property="delegate" destination="ZL4-CC-gcH" id="xfx-0G-Bch"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Pokémon" id="VPh-I9-Mdp"/>
+                    <tabBarItem key="tabBarItem" title="Pokémon" image="pokemon-icon" id="VPh-I9-Mdp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4U-9k-SjB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,7 +142,7 @@
                             <outlet property="delegate" destination="jO9-Y2-rZz" id="Gx7-xd-c36"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Nearby" id="8U3-7c-GYn"/>
+                    <tabBarItem key="tabBarItem" title="Nearby" image="nearby-icon" id="8U3-7c-GYn"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaW-5T-Amt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,18 +160,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pokemap" translatesAutoresizingMaskIntoConstraints="NO" id="eQR-I7-Sbl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pokemap" translatesAutoresizingMaskIntoConstraints="NO" id="eQR-I7-Sbl">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="eQR-I7-Sbl" secondAttribute="centerY" constant="24.5" id="0BL-OV-kR5"/>
-                            <constraint firstAttribute="centerX" secondItem="eQR-I7-Sbl" secondAttribute="centerX" id="RQe-Pc-1JP"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pokémap" id="Upr-6I-6dE"/>
+                    <tabBarItem key="tabBarItem" title="Pokémap" image="pokemap-icon" id="Upr-6I-6dE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aac-sr-bkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,8 +176,12 @@
     </scenes>
     <resources>
         <image name="2" width="120" height="120"/>
+        <image name="nearby-icon" width="50" height="50"/>
         <image name="pokedex" width="625" height="773"/>
+        <image name="pokedex-icon" width="50" height="50"/>
         <image name="pokemap" width="640" height="960"/>
+        <image name="pokemap-icon" width="625" height="773"/>
+        <image name="pokemon-icon" width="50" height="50"/>
         <image name="taskbar" width="635" height="118"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
