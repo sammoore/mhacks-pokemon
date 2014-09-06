@@ -34,6 +34,24 @@ const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
 
 #pragma mark - API methods
 
++ (NSDictionary *)getWildPokemon
+{
+    NSDictionary *allPokemon = [self getPokedex];
+    NSDictionary *pokemon = nil;
+    
+    while (pokemon == nil) {
+        NSUInteger index = arc4random_uniform([allPokemon[@"pokemon"] count]);
+        NSString *resource_uri = [[allPokemon[@"pokemon"] objectAtIndex:index] objectForKey:@"resource_uri"];
+        NSDictionary *p = [self getResponseWithResourceURI:resource_uri];
+        
+        if ([p[@"hp"] intValue] < 50) {
+            pokemon = [p copy];
+        }
+    }
+    
+    return pokemon;
+}
+
 + (NSDictionary *)getTypeWithID:(NSUInteger)id
 {
     return [self dictionaryFromURL:[self requestStringFromType:@"type" withID:id]];
