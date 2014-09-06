@@ -41,7 +41,7 @@
                                 <rect key="frame" x="121" y="61" width="179" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
                                 <connections>
                                     <outlet property="delegate" destination="46H-yG-egX" id="c0S-8y-Mhd"/>
                                 </connections>
@@ -176,12 +176,12 @@
     </scenes>
     <resources>
         <image name="2" width="120" height="120"/>
-        <image name="nearby-icon" width="50" height="50"/>
+        <image name="nearby-icon" width="20" height="20"/>
         <image name="pokedex" width="625" height="773"/>
-        <image name="pokedex-icon" width="50" height="50"/>
+        <image name="pokedex-icon" width="20" height="20"/>
         <image name="pokemap" width="640" height="960"/>
         <image name="pokemap-icon" width="625" height="773"/>
-        <image name="pokemon-icon" width="50" height="50"/>
+        <image name="pokemon-icon" width="20" height="20"/>
         <image name="taskbar" width="635" height="118"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

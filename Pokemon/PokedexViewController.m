@@ -46,7 +46,10 @@
     NSString *spriteURI = [[pokemon[@"sprites"] firstObject] objectForKey:@"resource_uri"];
     NSString *spriteImageURL = [@"http://pokeapi.co" stringByAppendingString: [[PokeAPI getResponseWithResourceURI:spriteURI] objectForKey:@"image"]];
 
-    NSLog(@"%@", desc);
+    _descriptionTextView.text = [NSString stringWithFormat:@"%@", desc];
+    _spriteImageView.image =[UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString: spriteImageURL]]];
+    
+    
     NSLog(@"%@", spriteImageURL);
 }
 
