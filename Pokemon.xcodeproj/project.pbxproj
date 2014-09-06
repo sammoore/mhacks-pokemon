@@ -41,6 +41,7 @@
 		D053D3A119BB941300E137B0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D053D3A019BB941300E137B0 /* FacebookSDK.framework */; };
 		D053D3A319BBA24400E137B0 /* FirebaseSimpleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D053D3A219BBA24400E137B0 /* FirebaseSimpleLogin.framework */; };
 		D053D3A519BBACF200E137B0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D053D3A419BBACF200E137B0 /* Social.framework */; };
+		D053D3A719BBB8C600E137B0 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D053D3A619BBB8C600E137B0 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		D053D3A019BB941300E137B0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		D053D3A219BBA24400E137B0 /* FirebaseSimpleLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseSimpleLogin.framework; sourceTree = "<group>"; };
 		D053D3A419BBACF200E137B0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		D053D3A619BBB8C600E137B0 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D053D3A719BBB8C600E137B0 /* CoreMotion.framework in Frameworks */,
 				D053D3A519BBACF200E137B0 /* Social.framework in Frameworks */,
 				22A9E5A919BAC21E003194FF /* SystemConfiguration.framework in Frameworks */,
 				D053D3A319BBA24400E137B0 /* FirebaseSimpleLogin.framework in Frameworks */,
@@ -162,6 +165,7 @@
 		22A9E56419BAB7C9003194FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D053D3A619BBB8C600E137B0 /* CoreMotion.framework */,
 				D053D3A419BBACF200E137B0 /* Social.framework */,
 				D053D3A219BBA24400E137B0 /* FirebaseSimpleLogin.framework */,
 				D053D3A019BB941300E137B0 /* FacebookSDK.framework */,
