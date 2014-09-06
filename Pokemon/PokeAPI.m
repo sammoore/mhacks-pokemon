@@ -12,7 +12,7 @@
 
 // used to take a resource URI returned by other methods and make a new request
 // + getResponseFromResourceURI
-const NSString *kPokeApiURL = @"http://pokeapi.co";
+const NSString *kPokeApiURL = @"http://pokeapi.co/";
 
 // used for all other methods
 const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
@@ -40,10 +40,6 @@ const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
     
     NSDictionary *match = Underscore.find(allPokemon, ^BOOL (NSDictionary *dict) {
         // TODO: also need to _at least_ check if dict[@"name"] begins with the query
-        NSLog(@"%@", dict[@"name"]);
-        NSLog(@"%@", query);
-        NSLog(@"%c", [dict[@"name"] isEqualToString:[query lowercaseString]]);
-        
         if ([dict[@"name"] isEqualToString:[query lowercaseString]] == YES) {
             return true;
         } else return false;

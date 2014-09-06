@@ -34,12 +34,20 @@
 // or IBAction return and id sender but we're triggering this,
 // and 'return' can't trigger an IBAction, so better code completion rules
 {
-    NSDictionary *pokemon = [PokeAPI findOnePokemonByString:[sender text]];
+    NSDictionary *pokemonRef = [PokeAPI findOnePokemonByString:[sender text]];
     
-    if (pokemon == nil)
-        NSLog(@"No Pokemon found like wat");
-    else
-        NSLog(@"You found: %@", [pokemon objectForKey:@"name"]);
+    if (pokemonRef == nil) return;
+    
+    NSDictionary *pokemon = [PokeAPI getResponseWithResourceURI:pokemonRef[@"resource_uri"]];
+    
+    NSString *pokedexURI = [[pokemon[@"descriptions"] firstObject] objectForKey:@"resource_uri"];
+    NSDictionary *desc = [[PokeAPI getResponseWithResourceURI:pokedexURI] objectForKey:@"description"];
+    
+    NSString *spriteURI = [[pokemon[@"sprites"] firstObject] objectForKey:@"resource_uri"];
+    NSString *spriteImageURL = [@"http://pokeapi.co" stringByAppendingString: [[PokeAPI getResponseWithResourceURI:spriteURI] objectForKey:@"image"]];
+
+    NSLog(@"%@", desc);
+    NSLog(@"%@", spriteImageURL);
 }
 
 #pragma mark - VC overrides
