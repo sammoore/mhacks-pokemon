@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Pokedex View Controller - Pokédex-->
+        <!--Pokedex View Controller-->
         <scene sceneID="nby-ic-Lm4">
             <objects>
                 <viewController id="46H-yG-egX" customClass="PokedexViewController" sceneMemberID="viewController">
@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pokedex" translatesAutoresizingMaskIntoConstraints="NO" id="PKL-9M-q2f">
-                                <rect key="frame" x="0.0" y="7" width="320" height="508"/>
+                                <rect key="frame" x="0.0" y="6" width="320" height="507"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="tn3-KV-5Ci">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Pokeball" translatesAutoresizingMaskIntoConstraints="NO" id="tn3-KV-5Ci">
                                 <rect key="frame" x="157" y="164" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" editable="NO" text="It carries a seed on its back right from birth. As it grows older, the seed also grows larger." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Co8-Oa-ZZX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="Search a pokemon above to see it's information here." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Co8-Oa-ZZX">
                                 <rect key="frame" x="29" y="344" width="196" height="144"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -37,7 +37,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfB-7f-o95">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Pokemon" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfB-7f-o95">
                                 <rect key="frame" x="121" y="61" width="179" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -57,17 +57,54 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" title="Pokédex" image="pokedex-icon" id="AaN-2U-tP8"/>
+                    <navigationItem key="navigationItem" id="sgg-fu-0XV"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="descriptionTextView" destination="Co8-Oa-ZZX" id="d71-uz-4Rs"/>
                         <outlet property="searchTextField" destination="sfB-7f-o95" id="M9w-p1-2D0"/>
                         <outlet property="spriteImageView" destination="tn3-KV-5Ci" id="WbO-4e-9Au"/>
+                        <segue destination="AZq-ZW-Mkb" kind="push" identifier="showLogin" id="ZWY-0x-OYU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7IN-bL-gsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654" y="-729"/>
+            <point key="canvasLocation" x="1148" y="-741"/>
+        </scene>
+        <!--Facebook Login View Controller-->
+        <scene sceneID="ZUO-6W-ZDj">
+            <objects>
+                <viewController id="AZq-ZW-Mkb" customClass="FacebookLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fQg-ha-xXi"/>
+                        <viewControllerLayoutGuide type="bottom" id="PXe-OG-nac"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ckW-kv-Kgo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="ra1-si-FeJ">
+                                <rect key="frame" x="-2" y="0.0" width="325" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="un3-BY-ahu">
+                                <rect key="frame" x="108" y="337" width="104" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="facebook button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="FacebookLoginButtonPressed:" destination="AZq-ZW-Mkb" eventType="touchUpInside" id="iAW-EQ-1bO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lxN-Wt-A8n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cYA-Rz-ndI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="-714"/>
         </scene>
         <!--Table View Controller - Pokémon-->
         <scene sceneID="nU4-M6-c40">
@@ -109,7 +146,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="46H-yG-egX" kind="relationship" relationship="viewControllers" id="30T-bM-Dj2"/>
+                        <segue destination="bfV-95-GDu" kind="relationship" relationship="viewControllers" id="30T-bM-Dj2"/>
                         <segue destination="ZL4-CC-gcH" kind="relationship" relationship="viewControllers" id="mGr-yh-JGP"/>
                         <segue destination="jO9-Y2-rZz" kind="relationship" relationship="viewControllers" id="YxT-x4-TJE"/>
                         <segue destination="gK0-FA-ZUh" kind="relationship" relationship="viewControllers" id="yYx-9B-sz3"/>
@@ -173,9 +210,30 @@
             </objects>
             <point key="canvasLocation" x="654" y="1258"/>
         </scene>
+        <!--Navigation Controller - Pokédex-->
+        <scene sceneID="TxA-j6-KnR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bfV-95-GDu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pokédex" image="pokedex-icon" id="AaN-2U-tP8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1L3-za-9lT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="46H-yG-egX" kind="relationship" relationship="rootViewController" id="mJp-gv-XsH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wDT-F0-xSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="-741"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="2" width="120" height="120"/>
+        <image name="Login" width="640" height="960"/>
+        <image name="Pokeball" width="120" height="120"/>
+        <image name="facebook button" width="150" height="150"/>
         <image name="nearby-icon" width="20" height="20"/>
         <image name="pokedex" width="625" height="773"/>
         <image name="pokedex-icon" width="20" height="20"/>

@@ -49,9 +49,7 @@
     _descriptionTextView.text = [NSString stringWithFormat:@"%@", desc];
     _spriteImageView.image =[UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString: spriteImageURL]]];
     
-    
-    NSLog(@"%@", spriteImageURL);
-}
+    }
 
 #pragma mark - VC overrides
 
@@ -64,10 +62,15 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+        self.tabBarController.tabBar.hidden = NO;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self performSegueWithIdentifier:@"showLogin" sender:self];
     
     _searchTextField.delegate = self;
 }

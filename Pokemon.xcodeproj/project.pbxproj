@@ -37,6 +37,10 @@
 		22A9E5C619BACCC8003194FF /* USDictionaryWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5C019BACCC8003194FF /* USDictionaryWrapper.m */; };
 		22A9E5C919BB13E6003194FF /* PokedexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5C819BB13E6003194FF /* PokedexViewController.m */; };
 		22A9E5CB19BB2F28003194FF /* pokedex.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E5CA19BB2F28003194FF /* pokedex.json */; };
+		D053D39F19BB87F400E137B0 /* FacebookLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D053D39E19BB87F400E137B0 /* FacebookLoginViewController.m */; };
+		D053D3A119BB941300E137B0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D053D3A019BB941300E137B0 /* FacebookSDK.framework */; };
+		D053D3A319BBA24400E137B0 /* FirebaseSimpleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D053D3A219BBA24400E137B0 /* FirebaseSimpleLogin.framework */; };
+		D053D3A519BBACF200E137B0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D053D3A419BBACF200E137B0 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +99,11 @@
 		22A9E5C719BB13E6003194FF /* PokedexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokedexViewController.h; sourceTree = "<group>"; };
 		22A9E5C819BB13E6003194FF /* PokedexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokedexViewController.m; sourceTree = "<group>"; };
 		22A9E5CA19BB2F28003194FF /* pokedex.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pokedex.json; sourceTree = "<group>"; };
+		D053D39D19BB87F400E137B0 /* FacebookLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookLoginViewController.h; sourceTree = "<group>"; };
+		D053D39E19BB87F400E137B0 /* FacebookLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookLoginViewController.m; sourceTree = "<group>"; };
+		D053D3A019BB941300E137B0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		D053D3A219BBA24400E137B0 /* FirebaseSimpleLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseSimpleLogin.framework; sourceTree = "<group>"; };
+		D053D3A419BBACF200E137B0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +111,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D053D3A519BBACF200E137B0 /* Social.framework in Frameworks */,
 				22A9E5A919BAC21E003194FF /* SystemConfiguration.framework in Frameworks */,
+				D053D3A319BBA24400E137B0 /* FirebaseSimpleLogin.framework in Frameworks */,
 				22A9E5A719BAC218003194FF /* Security.framework in Frameworks */,
 				22A9E5AB19BAC280003194FF /* GeoFire.framework in Frameworks */,
 				22A9E5A519BAC213003194FF /* CFNetwork.framework in Frameworks */,
@@ -110,6 +121,7 @@
 				22A9E5A119BAC202003194FF /* libicucore.dylib in Frameworks */,
 				22A9E56819BAB7C9003194FF /* CoreGraphics.framework in Frameworks */,
 				22A9E56A19BAB7C9003194FF /* UIKit.framework in Frameworks */,
+				D053D3A119BB941300E137B0 /* FacebookSDK.framework in Frameworks */,
 				22A9E56619BAB7C9003194FF /* Foundation.framework in Frameworks */,
 				22A9E59F19BAC1DD003194FF /* Firebase.framework in Frameworks */,
 			);
@@ -150,6 +162,9 @@
 		22A9E56419BAB7C9003194FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D053D3A419BBACF200E137B0 /* Social.framework */,
+				D053D3A219BBA24400E137B0 /* FirebaseSimpleLogin.framework */,
+				D053D3A019BB941300E137B0 /* FacebookSDK.framework */,
 				22A9E5AA19BAC280003194FF /* GeoFire.framework */,
 				22A9E5A819BAC21E003194FF /* SystemConfiguration.framework */,
 				22A9E5A619BAC218003194FF /* Security.framework */,
@@ -172,6 +187,8 @@
 				22A9E5AC19BAC502003194FF /* Models */,
 				22A9E57419BAB7C9003194FF /* AppDelegate.h */,
 				22A9E57519BAB7C9003194FF /* AppDelegate.m */,
+				D053D39D19BB87F400E137B0 /* FacebookLoginViewController.h */,
+				D053D39E19BB87F400E137B0 /* FacebookLoginViewController.m */,
 				22A9E57719BAB7C9003194FF /* Main.storyboard */,
 				22A9E57D19BAB7C9003194FF /* Images.xcassets */,
 				22A9E56C19BAB7C9003194FF /* Supporting Files */,
@@ -366,6 +383,7 @@
 				22A9E5C419BACCC8003194FF /* Underscore.m in Sources */,
 				22A9E57619BAB7C9003194FF /* AppDelegate.m in Sources */,
 				22A9E5C319BACCC8003194FF /* Underscore+Functional.m in Sources */,
+				D053D39F19BB87F400E137B0 /* FacebookLoginViewController.m in Sources */,
 				22A9E5AF19BAC52C003194FF /* PokeAPI.m in Sources */,
 				22A9E57219BAB7C9003194FF /* main.m in Sources */,
 				22A9E5C119BACCC8003194FF /* Underscore+Strings.m in Sources */,

@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <Firebase/Firebase.h>
+#import <FacebookSDK/FacebookSDK.h>
+#import <FirebaseSimpleLogin/FirebaseSimpleLogin.h>
 
 @implementation AppDelegate
 
@@ -15,6 +18,17 @@
     // Override point for customization after application launch.
     return YES;
 }
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    // add any app-specific handling code here
+    return wasHandled;
+}
+
+
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
