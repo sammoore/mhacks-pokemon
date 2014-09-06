@@ -14,13 +14,20 @@
 		22A9E57219BAB7C9003194FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E57119BAB7C9003194FF /* main.m */; };
 		22A9E57619BAB7C9003194FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E57519BAB7C9003194FF /* AppDelegate.m */; };
 		22A9E57919BAB7C9003194FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E57719BAB7C9003194FF /* Main.storyboard */; };
-		22A9E57C19BAB7C9003194FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E57B19BAB7C9003194FF /* ViewController.m */; };
 		22A9E57E19BAB7C9003194FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E57D19BAB7C9003194FF /* Images.xcassets */; };
 		22A9E58519BAB7C9003194FF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E58419BAB7C9003194FF /* XCTest.framework */; };
 		22A9E58619BAB7C9003194FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E56519BAB7C9003194FF /* Foundation.framework */; };
 		22A9E58719BAB7C9003194FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E56919BAB7C9003194FF /* UIKit.framework */; };
 		22A9E58F19BAB7C9003194FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E58D19BAB7C9003194FF /* InfoPlist.strings */; };
 		22A9E59119BAB7C9003194FF /* PokemonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E59019BAB7C9003194FF /* PokemonTests.m */; };
+		22A9E59C19BAC070003194FF /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E59B19BAC070003194FF /* RootTabBarViewController.m */; };
+		22A9E59F19BAC1DD003194FF /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E59E19BAC1DD003194FF /* Firebase.framework */; };
+		22A9E5A119BAC202003194FF /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E5A019BAC202003194FF /* libicucore.dylib */; };
+		22A9E5A319BAC20A003194FF /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E5A219BAC20A003194FF /* libc++.dylib */; };
+		22A9E5A519BAC213003194FF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E5A419BAC213003194FF /* CFNetwork.framework */; };
+		22A9E5A719BAC218003194FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E5A619BAC218003194FF /* Security.framework */; };
+		22A9E5A919BAC21E003194FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E5A819BAC21E003194FF /* SystemConfiguration.framework */; };
+		22A9E5AB19BAC280003194FF /* GeoFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E5AA19BAC280003194FF /* GeoFire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +52,21 @@
 		22A9E57419BAB7C9003194FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22A9E57519BAB7C9003194FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		22A9E57819BAB7C9003194FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		22A9E57A19BAB7C9003194FF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		22A9E57B19BAB7C9003194FF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		22A9E57D19BAB7C9003194FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		22A9E58319BAB7C9003194FF /* PokemonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A9E58419BAB7C9003194FF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		22A9E58C19BAB7C9003194FF /* PokemonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PokemonTests-Info.plist"; sourceTree = "<group>"; };
 		22A9E58E19BAB7C9003194FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22A9E59019BAB7C9003194FF /* PokemonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokemonTests.m; sourceTree = "<group>"; };
+		22A9E59A19BAC070003194FF /* RootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarViewController.h; sourceTree = "<group>"; };
+		22A9E59B19BAC070003194FF /* RootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarViewController.m; sourceTree = "<group>"; };
+		22A9E59E19BAC1DD003194FF /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		22A9E5A019BAC202003194FF /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		22A9E5A219BAC20A003194FF /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		22A9E5A419BAC213003194FF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		22A9E5A619BAC218003194FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		22A9E5A819BAC21E003194FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		22A9E5AA19BAC280003194FF /* GeoFire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GeoFire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +74,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A9E5A919BAC21E003194FF /* SystemConfiguration.framework in Frameworks */,
+				22A9E5A719BAC218003194FF /* Security.framework in Frameworks */,
+				22A9E5AB19BAC280003194FF /* GeoFire.framework in Frameworks */,
+				22A9E5A519BAC213003194FF /* CFNetwork.framework in Frameworks */,
+				22A9E5A319BAC20A003194FF /* libc++.dylib in Frameworks */,
+				22A9E5A119BAC202003194FF /* libicucore.dylib in Frameworks */,
 				22A9E56819BAB7C9003194FF /* CoreGraphics.framework in Frameworks */,
 				22A9E56A19BAB7C9003194FF /* UIKit.framework in Frameworks */,
 				22A9E56619BAB7C9003194FF /* Foundation.framework in Frameworks */,
+				22A9E59F19BAC1DD003194FF /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +122,13 @@
 		22A9E56419BAB7C9003194FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22A9E5AA19BAC280003194FF /* GeoFire.framework */,
+				22A9E5A819BAC21E003194FF /* SystemConfiguration.framework */,
+				22A9E5A619BAC218003194FF /* Security.framework */,
+				22A9E5A419BAC213003194FF /* CFNetwork.framework */,
+				22A9E5A219BAC20A003194FF /* libc++.dylib */,
+				22A9E5A019BAC202003194FF /* libicucore.dylib */,
+				22A9E59E19BAC1DD003194FF /* Firebase.framework */,
 				22A9E56519BAB7C9003194FF /* Foundation.framework */,
 				22A9E56719BAB7C9003194FF /* CoreGraphics.framework */,
 				22A9E56919BAB7C9003194FF /* UIKit.framework */,
@@ -115,10 +143,10 @@
 				22A9E57419BAB7C9003194FF /* AppDelegate.h */,
 				22A9E57519BAB7C9003194FF /* AppDelegate.m */,
 				22A9E57719BAB7C9003194FF /* Main.storyboard */,
-				22A9E57A19BAB7C9003194FF /* ViewController.h */,
-				22A9E57B19BAB7C9003194FF /* ViewController.m */,
 				22A9E57D19BAB7C9003194FF /* Images.xcassets */,
 				22A9E56C19BAB7C9003194FF /* Supporting Files */,
+				22A9E59A19BAC070003194FF /* RootTabBarViewController.h */,
+				22A9E59B19BAC070003194FF /* RootTabBarViewController.m */,
 			);
 			path = Pokemon;
 			sourceTree = "<group>";
@@ -252,9 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22A9E57C19BAB7C9003194FF /* ViewController.m in Sources */,
 				22A9E57619BAB7C9003194FF /* AppDelegate.m in Sources */,
 				22A9E57219BAB7C9003194FF /* main.m in Sources */,
+				22A9E59C19BAC070003194FF /* RootTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,9 +409,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pokemon/Pokemon-Prefix.pch";
 				INFOPLIST_FILE = "Pokemon/Pokemon-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -397,9 +430,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pokemon/Pokemon-Prefix.pch";
 				INFOPLIST_FILE = "Pokemon/Pokemon-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
