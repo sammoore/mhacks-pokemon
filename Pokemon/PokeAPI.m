@@ -36,12 +36,15 @@ const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
 
 + (NSDictionary *)findOnePokemonByString:(NSString *)query
 {
-    NSArray *allPokemon = [[self getPokedex] objectForKey:@"pokemon"];
+    NSArray *allPokemon = [self getPokedex];
     
     Underscore.find(allPokemon, ^BOOL (NSDictionary *dict) {
         // TODO: also need to _at least_ check if dict[@"name"] begins with the query
         NSLog(@"%@", dict[@"name"]);
-        if ([[dict[@"name"] lowercaseString] isEqualToString:[query lowercaseString]]) {
+        NSLog(@"%@", query);
+        NSLog(@"%c", [dict[@"name"] isEqualToString:[query lowercaseString]]);
+        
+        if ([dict[@"name"] isEqualToString:[query lowercaseString]]) {
             return true;
         } else return false;
     });
@@ -51,7 +54,7 @@ const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
 
 + (NSDictionary *)getWildPokemon
 {
-    NSArray *allPokemon = [[self getPokedex] objectForKey:@"pokemon"];
+    NSArray *allPokemon = [self getPokedex];
     NSDictionary *pokemon = nil;
     
     while (pokemon == nil) {
@@ -82,9 +85,19 @@ const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
     return [self dictionaryFromURL:[self requestStringFromType:@"pokemon" withID:id]];
 }
 
-+ (NSDictionary *)getPokedex
++ (NSArray *)getPokedex
 {
-    return [self dictionaryFromURL:[self requestStringFromType:@"pokedex" withID:1]];
+    NSError *error = nil;
+    NSData *JSON = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pokedex" ofType:@"json"]];
+    
+    NSArray *array = [NSJSONSerialization JSONObjectWithData:JSON options:kNilOptions error:&error];
+    
+    if (error) {
+        NSLog(@"%@", error);
+        return nil;
+    }
+    
+    return array;
 }
 
 + (NSDictionary *)getResponseWithResourceURI:(NSString *)resourceURI
@@ -104,12 +117,9 @@ const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
 + (NSDictionary *)dictionaryFromURL:(NSString *)URL
 {
     NSError *error = nil;
-    NSData *response = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pokedex" ofType:@"json"]];
+    NSData *response = [NSData dataWithContentsOfURL:[NSURL URLWithString:URL]];
     
-    NSArray *dictionary = [NSJSONSerialization JSONObjectWithData:response options:kNilOptions error:&error];
-    
-    NSLog(@"%@", dictionary);
-    NSLog(@"%@", [dictionary[7] objectForKey:@"name"]);
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:response options:kNilOptions error:&error];
     
     if (error) {
         NSLog(@"%@", error);
