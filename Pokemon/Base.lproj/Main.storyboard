@@ -4,26 +4,58 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Pokédex-->
+        <!--Pokedex View Controller - Pokédex-->
         <scene sceneID="nby-ic-Lm4">
             <objects>
-                <viewController id="46H-yG-egX" sceneMemberID="viewController">
+                <viewController id="46H-yG-egX" customClass="PokedexViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KqF-5v-Y0k"/>
                         <viewControllerLayoutGuide type="bottom" id="9oI-Mc-cqt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="a40-22-bxe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pokedex" translatesAutoresizingMaskIntoConstraints="NO" id="znl-rS-ZOe">
-                                <rect key="frame" x="2" y="12" width="318" height="421"/>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pokedex" translatesAutoresizingMaskIntoConstraints="NO" id="PKL-9M-q2f">
+                                <rect key="frame" x="0.0" y="7" width="320" height="508"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="tn3-KV-5Ci">
+                                <rect key="frame" x="157" y="164" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" editable="NO" text="It carries a seed on its back right from birth. As it grows older, the seed also grows larger." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Co8-Oa-ZZX">
+                                <rect key="frame" x="29" y="344" width="196" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="9Vc-KA-Ztr"/>
+                                    <constraint firstAttribute="height" constant="144" id="Fyg-dh-MYo"/>
+                                    <constraint firstAttribute="width" constant="196" id="K8n-CW-PcZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="144" id="OVw-qQ-lVN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfB-7f-o95">
+                                <rect key="frame" x="121" y="61" width="179" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PKL-9M-q2f" firstAttribute="centerX" secondItem="tn3-KV-5Ci" secondAttribute="centerX" constant="-47" id="2kP-W4-g97"/>
+                            <constraint firstItem="9oI-Mc-cqt" firstAttribute="top" secondItem="Co8-Oa-ZZX" secondAttribute="bottom" constant="12" id="b20-TM-x4g"/>
+                            <constraint firstItem="9oI-Mc-cqt" firstAttribute="top" secondItem="PKL-9M-q2f" secondAttribute="bottom" constant="4" id="gPG-jk-Xte"/>
+                            <constraint firstItem="sfB-7f-o95" firstAttribute="leading" secondItem="KqF-5v-Y0k" secondAttribute="trailing" constant="-199" id="mFP-b2-AH5"/>
+                            <constraint firstItem="PKL-9M-q2f" firstAttribute="centerY" secondItem="tn3-KV-5Ci" secondAttribute="centerY" constant="44" id="rAw-72-hb7"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Pokédex" id="AaN-2U-tP8"/>
+                    <size key="freeformSize" width="320" height="568"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7IN-bL-gsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,6 +167,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2" width="120" height="120"/>
         <image name="pokedex" width="625" height="773"/>
         <image name="pokemap" width="640" height="960"/>
         <image name="taskbar" width="635" height="118"/>

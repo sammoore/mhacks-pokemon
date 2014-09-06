@@ -35,6 +35,7 @@
 		22A9E5C419BACCC8003194FF /* Underscore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5BB19BACCC8003194FF /* Underscore.m */; };
 		22A9E5C519BACCC8003194FF /* USArrayWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5BD19BACCC8003194FF /* USArrayWrapper.m */; };
 		22A9E5C619BACCC8003194FF /* USDictionaryWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5C019BACCC8003194FF /* USDictionaryWrapper.m */; };
+		22A9E5C919BB13E6003194FF /* PokedexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5C819BB13E6003194FF /* PokedexViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		22A9E5BE19BACCC8003194FF /* USConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USConstants.h; sourceTree = "<group>"; };
 		22A9E5BF19BACCC8003194FF /* USDictionaryWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USDictionaryWrapper.h; sourceTree = "<group>"; };
 		22A9E5C019BACCC8003194FF /* USDictionaryWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USDictionaryWrapper.m; sourceTree = "<group>"; };
+		22A9E5C719BB13E6003194FF /* PokedexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokedexViewController.h; sourceTree = "<group>"; };
+		22A9E5C819BB13E6003194FF /* PokedexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokedexViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 				22A9E56C19BAB7C9003194FF /* Supporting Files */,
 				22A9E59A19BAC070003194FF /* RootTabBarViewController.h */,
 				22A9E59B19BAC070003194FF /* RootTabBarViewController.m */,
+				22A9E5C719BB13E6003194FF /* PokedexViewController.h */,
+				22A9E5C819BB13E6003194FF /* PokedexViewController.m */,
 			);
 			path = Pokemon;
 			sourceTree = "<group>";
@@ -299,7 +304,7 @@
 				ORGANIZATIONNAME = sammoore;
 				TargetAttributes = {
 					22A9E56119BAB7C9003194FF = {
-						DevelopmentTeam = 4ETUTSYY89;
+						DevelopmentTeam = Z5AR6RGC9X;
 					};
 					22A9E58219BAB7C9003194FF = {
 						TestTargetID = 22A9E56119BAB7C9003194FF;
@@ -360,6 +365,7 @@
 				22A9E5AF19BAC52C003194FF /* PokeAPI.m in Sources */,
 				22A9E57219BAB7C9003194FF /* main.m in Sources */,
 				22A9E5C119BACCC8003194FF /* Underscore+Strings.m in Sources */,
+				22A9E5C919BB13E6003194FF /* PokedexViewController.m in Sources */,
 				22A9E59C19BAC070003194FF /* RootTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

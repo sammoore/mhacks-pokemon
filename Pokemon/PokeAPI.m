@@ -34,14 +34,25 @@ const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
 
 #pragma mark - API methods
 
++ (NSDictionary *)findOnePokemonByString:(NSString *)query
+{
+    NSArray *allPokemon = [[self getPokedex] objectForKey:@"pokemon"];
+
+    Underscore.find(allPokemon, ^BOOL (NSDictionary *dict) {
+        return true;
+    });
+    
+    return nil;
+}
+
 + (NSDictionary *)getWildPokemon
 {
-    NSDictionary *allPokemon = [self getPokedex];
+    NSArray *allPokemon = [[self getPokedex] objectForKey:@"pokemon"];
     NSDictionary *pokemon = nil;
     
     while (pokemon == nil) {
-        NSUInteger index = arc4random_uniform([allPokemon[@"pokemon"] count]);
-        NSString *resource_uri = [[allPokemon[@"pokemon"] objectAtIndex:index] objectForKey:@"resource_uri"];
+        NSUInteger index = arc4random_uniform([allPokemon count]);
+        NSString *resource_uri = [[allPokemon objectAtIndex:index] objectForKey:@"resource_uri"];
         NSDictionary *p = [self getResponseWithResourceURI:resource_uri];
         
         if ([p[@"hp"] intValue] < 50) {
