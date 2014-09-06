@@ -160,12 +160,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pokemap" translatesAutoresizingMaskIntoConstraints="NO" id="eQR-I7-Sbl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pokemap" translatesAutoresizingMaskIntoConstraints="NO" id="eQR-I7-Sbl">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="eQR-I7-Sbl" secondAttribute="centerY" constant="24.5" id="0BL-OV-kR5"/>
+                            <constraint firstAttribute="centerX" secondItem="eQR-I7-Sbl" secondAttribute="centerX" id="RQe-Pc-1JP"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pokémap" id="Upr-6I-6dE"/>
                 </viewController>
