@@ -39,7 +39,10 @@ const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
     NSArray *allPokemon = [[self getPokedex] objectForKey:@"pokemon"];
 
     Underscore.find(allPokemon, ^BOOL (NSDictionary *dict) {
-        return true;
+        // TODO: also need to _at least_ check if dict[@"name"] begins with the query
+        if ([[dict[@"name"] lowercaseString] isEqualToString:[query lowercaseString]]) {
+            return true;
+        } else return false;
     });
     
     return nil;

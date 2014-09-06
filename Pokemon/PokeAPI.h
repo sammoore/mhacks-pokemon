@@ -11,6 +11,10 @@
 
 @interface PokeAPI : NSObject
 
+// VC helper methods used for app functionality
++ (NSDictionary *)findOnePokemonByString:(NSString *)query;
++ (NSDictionary *)getWildPokemon;
+
 // Sometimes we get resource uri's as a reference from the API,
 // e.g. in a pokemon['abilities'], each has a resource URI to get
 // said ability, so we have a full URI so we don't use the method below
