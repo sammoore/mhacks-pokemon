@@ -28,6 +28,7 @@
 		22A9E5A719BAC218003194FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E5A619BAC218003194FF /* Security.framework */; };
 		22A9E5A919BAC21E003194FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E5A819BAC21E003194FF /* SystemConfiguration.framework */; };
 		22A9E5AB19BAC280003194FF /* GeoFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A9E5AA19BAC280003194FF /* GeoFire.framework */; };
+		22A9E5AF19BAC52C003194FF /* PokeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5AE19BAC52C003194FF /* PokeAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		22A9E5A619BAC218003194FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		22A9E5A819BAC21E003194FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		22A9E5AA19BAC280003194FF /* GeoFire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GeoFire.framework; sourceTree = "<group>"; };
+		22A9E5AD19BAC52C003194FF /* PokeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokeAPI.h; sourceTree = "<group>"; };
+		22A9E5AE19BAC52C003194FF /* PokeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokeAPI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,7 @@
 		22A9E56B19BAB7C9003194FF /* Pokemon */ = {
 			isa = PBXGroup;
 			children = (
+				22A9E5AC19BAC502003194FF /* Models */,
 				22A9E57419BAB7C9003194FF /* AppDelegate.h */,
 				22A9E57519BAB7C9003194FF /* AppDelegate.m */,
 				22A9E57719BAB7C9003194FF /* Main.storyboard */,
@@ -178,6 +182,15 @@
 				22A9E58D19BAB7C9003194FF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22A9E5AC19BAC502003194FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				22A9E5AD19BAC52C003194FF /* PokeAPI.h */,
+				22A9E5AE19BAC52C003194FF /* PokeAPI.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A9E57619BAB7C9003194FF /* AppDelegate.m in Sources */,
+				22A9E5AF19BAC52C003194FF /* PokeAPI.m in Sources */,
 				22A9E57219BAB7C9003194FF /* main.m in Sources */,
 				22A9E59C19BAC070003194FF /* RootTabBarViewController.m in Sources */,
 			);
