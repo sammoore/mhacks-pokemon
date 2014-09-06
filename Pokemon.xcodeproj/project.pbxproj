@@ -199,6 +199,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = sammoore;
 				TargetAttributes = {
+					22A9E56119BAB7C9003194FF = {
+						DevelopmentTeam = Z5AR6RGC9X;
+					};
 					22A9E58219BAB7C9003194FF = {
 						TestTargetID = 22A9E56119BAB7C9003194FF;
 					};
@@ -376,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pokemon/Pokemon-Prefix.pch";
 				INFOPLIST_FILE = "Pokemon/Pokemon-Info.plist";
@@ -389,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pokemon/Pokemon-Prefix.pch";
 				INFOPLIST_FILE = "Pokemon/Pokemon-Info.plist";
