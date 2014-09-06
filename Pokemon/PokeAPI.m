@@ -7,6 +7,7 @@
 //
 
 #import "PokeAPI.h"
+#import "JSONKit.h"
 
 // SM: TODO: refactor obvi
 
@@ -37,9 +38,10 @@ const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
 + (NSDictionary *)findOnePokemonByString:(NSString *)query
 {
     NSArray *allPokemon = [[self getPokedex] objectForKey:@"pokemon"];
-
+    
     Underscore.find(allPokemon, ^BOOL (NSDictionary *dict) {
         // TODO: also need to _at least_ check if dict[@"name"] begins with the query
+        NSLog(@"%@", dict[@"name"]);
         if ([[dict[@"name"] lowercaseString] isEqualToString:[query lowercaseString]]) {
             return true;
         } else return false;
@@ -103,18 +105,11 @@ const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
 + (NSDictionary *)dictionaryFromURL:(NSString *)URL
 {
     NSError *error = nil;
-    NSData *response = [NSData dataWithContentsOfURL:[NSURL URLWithString:URL]
-                                             options:NSDataReadingMappedAlways
-                                               error:&error];
+    NSData *response = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pokedex" ofType:@"json"]];
     
-    if (error) {
-        NSLog(@"%@", error);
-        return nil;
-    }
+    NSArray *dictionary = [[JSONDecoder decoder] objectWithData:response];
     
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:response
-                                                               options:kNilOptions
-                                                                 error:&error];
+    NSLog(@"%@", dictionary);
     
     if (error) {
         NSLog(@"%@", error);

@@ -7,12 +7,42 @@
 //
 
 #import "PokedexViewController.h"
+#import "PokeAPI.h"
 
 @interface PokedexViewController ()
 
 @end
 
 @implementation PokedexViewController
+
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == _searchTextField)
+    {
+        [textField resignFirstResponder];
+        [self searchFieldReturned:textField];
+    }
+    return NO;
+}
+
+#pragma mark - Interface Actions
+
+- (void)searchFieldReturned:(UITextField *)sender
+// or IBAction return and id sender but we're triggering this,
+// and 'return' can't trigger an IBAction, so better code completion rules
+{
+    NSDictionary *pokemon = [PokeAPI findOnePokemonByString:[sender text]];
+    
+    if (pokemon == nil)
+        NSLog(@"No Pokemon found like wat");
+    else
+        NSLog(@"You found: %@", [pokemon objectForKey:@"name"]);
+}
+
+#pragma mark - VC overrides
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +57,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _searchTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning

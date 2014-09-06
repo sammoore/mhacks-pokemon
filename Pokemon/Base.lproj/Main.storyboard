@@ -42,6 +42,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="46H-yG-egX" id="c0S-8y-Mhd"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -56,6 +59,11 @@
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Pokédex" id="AaN-2U-tP8"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="Co8-Oa-ZZX" id="d71-uz-4Rs"/>
+                        <outlet property="searchTextField" destination="sfB-7f-o95" id="M9w-p1-2D0"/>
+                        <outlet property="spriteImageView" destination="tn3-KV-5Ci" id="WbO-4e-9Au"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7IN-bL-gsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

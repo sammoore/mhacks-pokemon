@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PokedexViewController : UIViewController
+@interface PokedexViewController : UIViewController <UITextFieldDelegate>
+
+
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *spriteImageView;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
 @end
