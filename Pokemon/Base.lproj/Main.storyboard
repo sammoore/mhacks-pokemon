@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pokedex" translatesAutoresizingMaskIntoConstraints="NO" id="znl-rS-ZOe">
-                                <rect key="frame" x="0.0" y="0.0" width="329" height="568"/>
+                                <rect key="frame" x="2" y="12" width="318" height="421"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -63,7 +63,7 @@
             <objects>
                 <tabBarController definesPresentationContext="YES" id="6ks-8m-AhP" customClass="RootTabBarViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="Vfn-2c-15D">
+                    <tabBar key="tabBar" contentMode="scaleToFill" backgroundImage="taskbar" id="Vfn-2c-15D">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -135,8 +135,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pokedex" width="640" height="960"/>
+        <image name="pokedex" width="625" height="773"/>
         <image name="pokemap" width="640" height="960"/>
+        <image name="taskbar" width="635" height="118"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
