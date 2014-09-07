@@ -78,14 +78,14 @@
     NSString *pokedexURI = [[pokemon[@"descriptions"] firstObject] objectForKey:@"resource_uri"];
     NSDictionary *desc = [[PokeAPI getResponseWithResourceURI:pokedexURI] objectForKey:@"description"];
     //Pokemon Level
-    NSString *pokedexURI = [[pokemon[@"descriptions"] firstObject] objectForKey:@"resource_uri"];
-    NSDictionary *desc = [[PokeAPI getResponseWithResourceURI:pokedexURI] objectForKey:@"description"];
+    //NSString *pokedexURI = [[pokemon[@"descriptions"] firstObject] objectForKey:@"resource_uri"];
+    //NSDictionary *desc = [[PokeAPI getResponseWithResourceURI:pokedexURI] objectForKey:@"description"];
     //Pokemon Image
     NSString *spriteURI = [[pokemon[@"sprites"] firstObject] objectForKey:@"resource_uri"];
     NSString *spriteImageURL = [@"http://pokeapi.co" stringByAppendingString: [[PokeAPI getResponseWithResourceURI:spriteURI] objectForKey:@"image"]];
     //Set the above to their outlets
     _pokemonName.text = [NSString stringWithFormat:@"%@", desc];
-    _pokemonLevel.text = [NSString stringWithFormat:@"%@", num];
+    //_pokemonLevel.text = [NSString stringWithFormat:@"%@", num];
     _pokemonImage.image =[UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString: spriteImageURL]]];
     */
 }
