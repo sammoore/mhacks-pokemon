@@ -260,6 +260,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iix-KF-wll">
+                                <rect key="frame" x="20" y="468" width="280" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -267,6 +273,7 @@
                         <outlet property="pokemonImage" destination="vgL-fp-z7O" id="wfl-xw-7Om"/>
                         <outlet property="pokemonLevel" destination="M9X-9z-2ZR" id="TQc-hU-gy6"/>
                         <outlet property="pokemonName" destination="N0C-bP-10J" id="wHa-Jf-R8t"/>
+                        <outlet property="status" destination="iix-KF-wll" id="jA4-hM-Bly"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ot9-Md-HdU" userLabel="First Responder" sceneMemberID="firstResponder"/>

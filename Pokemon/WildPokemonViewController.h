@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FacebookAPI.h"
+#import <Firebase/Firebase.h>
 
-@interface WildPokemonViewController : UIViewController
+@interface WildPokemonViewController : UIViewController <FBAPIDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *pokemonName;
 @property (weak, nonatomic) IBOutlet UILabel *pokemonLevel;
 @property (weak, nonatomic) IBOutlet UIImageView *pokemonImage;
+@property (weak, nonatomic) IBOutlet UILabel *status;
 - (IBAction)throwPokeball:(id)sender;
 
 - (IBAction)runAway:(id)sender;

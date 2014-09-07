@@ -47,12 +47,13 @@
     {
         //NSLog(@"hi");
         
-        NSArray *temp = Underscore.reject([self.pokemonDict objectForKey:self.userID], Underscore.isNull);
+        NSDictionary *temp = Underscore.rejectValues([self.pokemonDict objectForKey:self.userID], Underscore.isNull);
         
         NSMutableArray *dataSource = [[NSMutableArray alloc] init];
         
         for (NSDictionary *pokemon in temp) {
-            NSString *pid = [NSString stringWithFormat:@"%@", pokemon[@"pokemon_id"]];
+            NSLog(@"%@", pokemon);
+            NSString *pid = [NSString stringWithFormat:@"%@", temp[pokemon] [@"pokemon_id"]];
             [dataSource addObject:[PokeAPI getPokemonWithID:pid]];
         }
         
@@ -82,18 +83,21 @@
 {
     [super viewDidLoad];
     
-    [self.FBRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-        [self updatePokemon:snapshot.value];
-    } withCancelBlock:^(NSError *error) {
-        NSLog(@"%@", error.description);
-    }];
-    
     NSLog(@"hi!");
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.FBRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        [self updatePokemon:snapshot.value];
+    } withCancelBlock:^(NSError *error) {
+        NSLog(@"%@", error.description);
+    }];
 }
 
 - (void)didReceiveMemoryWarning

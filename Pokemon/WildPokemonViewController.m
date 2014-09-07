@@ -8,10 +8,14 @@
 
 #import "WildPokemonViewController.h"
 #import "PokeAPI.h"
+#import "FacebookAPI.h"
+#import "PokeAPI.h"
+#import "Underscore/Underscore.h"
 
 @interface WildPokemonViewController ()
 
-
+@property int PokemonID;
+@property NSString* PokemonLev;
 
 @end
 
@@ -35,12 +39,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     NSDictionary *pokemon = [PokeAPI getWildPokemon];
+    self.PokemonID = [pokemon[@"national_id"] intValue];
+    
     //Pokemon Image
     NSString *spriteURI = [[pokemon[@"sprites"] firstObject] objectForKey:@"resource_uri"];
     NSString *spriteImageURL = [@"http://pokeapi.co" stringByAppendingString: [[PokeAPI getResponseWithResourceURI:spriteURI] objectForKey:@"image"]];
     
     _pokemonName.text = pokemon[@"name"];
-    _pokemonLevel.text = [NSString stringWithFormat:@"%d", arc4random_uniform(7) + 3];
+    _pokemonLevel.text = self.PokemonLev = [NSString stringWithFormat:@"%d", arc4random_uniform(7) + 3];
     _pokemonImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:spriteImageURL]]];
 }
 
@@ -90,8 +96,31 @@
     */
 }
 
-- (IBAction)throwPokeball:(id)sender {
+- (void)publicProfileReceived:(NSDictionary *)publicProfile
+{
+    Firebase* ref = [[Firebase alloc] initWithUrl:[@"https://mhacks-pokemon.firebaseio.com/pokemon/" stringByAppendingString:publicProfile[@"id"]]];
     
+    Firebase* pokemonRef = [ref childByAutoId];
+    
+    [pokemonRef setValue:@{
+                          @"pokemon_id": [NSString stringWithFormat:@"%d", (int)self.PokemonID],
+                          @"level": self.PokemonLev
+                          }];
+    
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)throwPokeball:(id)sender {
+    if (arc4random_uniform(100) < 70) {
+        // caught
+        _status.text = @"Success!";
+        [FacebookAPI getPublicProfile:self];
+    } else {
+        // ran away
+        _status.text = @"He escaped!";
+        
+        [self performSelector:@selector(runAway:) withObject:self afterDelay:5.0];
+    }
 }
 
 - (IBAction)runAway:(id)sender {
