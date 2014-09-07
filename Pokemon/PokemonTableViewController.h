@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Firebase/Firebase.h>
 #import "FacebookAPI.h"
+#import "PokeAPI.h"
 #import "Underscore/Underscore.h"
 
 @interface PokemonTableViewController : UITableViewController <FBAPIDelegate>

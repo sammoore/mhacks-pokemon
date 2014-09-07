@@ -21,11 +21,11 @@
 + (NSDictionary *)getResponseWithResourceURI:(NSString *)resourceURI;
 
 // The basic API calls for specific objects
-+ (NSDictionary *)getTypeWithID:(NSUInteger)id;
++ (NSDictionary *)getTypeWithID:(NSString *)id;
 
-+ (NSDictionary *)getAbilityWithID:(NSUInteger)id;
++ (NSDictionary *)getAbilityWithID:(NSString *)id;
 
-+ (NSDictionary *)getPokemonWithID:(NSUInteger)id;
++ (NSDictionary *)getPokemonWithID:(NSString *)id;
 
 // This literally gets all the pokemon, around 500 or 700
 + (NSArray *)getPokedex;

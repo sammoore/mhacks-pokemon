@@ -66,19 +66,19 @@ const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
     return pokemon;
 }
 
-+ (NSDictionary *)getTypeWithID:(NSUInteger)id
++ (NSDictionary *)getTypeWithID:(NSString *)pid
 {
-    return [self dictionaryFromURL:[self requestStringFromType:@"type" withID:id]];
+    return [self dictionaryFromURL:[self requestStringFromType:@"type" withID:pid]];
 }
 
-+ (NSDictionary *)getAbilityWithID:(NSUInteger)id
++ (NSDictionary *)getAbilityWithID:(NSString *)pid
 {
-    return [self dictionaryFromURL:[self requestStringFromType:@"ability" withID:id]];
+    return [self dictionaryFromURL:[self requestStringFromType:@"ability" withID:pid]];
 }
 
-+ (NSDictionary *)getPokemonWithID:(NSUInteger)id
++ (NSDictionary *)getPokemonWithID:(NSString *)pid
 {
-    return [self dictionaryFromURL:[self requestStringFromType:@"pokemon" withID:id]];
+    return [self dictionaryFromURL:[self requestStringFromType:@"pokemon" withID:pid]];
 }
 
 + (NSArray *)getPokedex
@@ -104,10 +104,10 @@ const NSString *kPokeApiRef = @"http://pokeapi.co/api/v1/";
 #pragma mark - Helper methods for API
 
 + (NSString *)requestStringFromType:(NSString *)objectType
-                             withID:(NSUInteger)id
+                             withID:(NSString *)pid
 {
     NSString *apiRefWithType = [[kPokeApiRef stringByAppendingString:objectType] stringByAppendingString:@"/"];
-    return [apiRefWithType stringByAppendingString:[NSString stringWithFormat:@"%li", id]];
+    return [apiRefWithType stringByAppendingString:pid];
 }
 
 + (NSDictionary *)dictionaryFromURL:(NSString *)URL

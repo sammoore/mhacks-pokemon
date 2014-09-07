@@ -45,7 +45,21 @@
 {
     if (self.userID != nil && self.pokemonDict != nil)
     {
-        //Underscore.dictionary(self.pokemonDict)
+        //NSLog(@"hi");
+        
+        NSArray *temp = Underscore.reject([self.pokemonDict objectForKey:self.userID], Underscore.isNull);
+        
+        NSMutableArray *dataSource = [[NSMutableArray alloc] init];
+        
+        for (NSDictionary *pokemon in temp) {
+            NSString *pid = [NSString stringWithFormat:@"%@", pokemon[@"pokemon_id"]];
+            [dataSource addObject:[PokeAPI getPokemonWithID:pid]];
+        }
+        
+        NSLog(@"%@", dataSource);
+        self.dataSource = (NSArray *)[dataSource copy];
+        
+        [self.tableView reloadData];
     }
 }
 
@@ -92,28 +106,39 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+//#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+//#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    if (self.dataSource == nil) return 0;
+    
+    return [self.dataSource count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    
+    NSDictionary *p = [self.dataSource objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [p objectForKey:@"name"];
+    
+    NSString *spriteURI = [[p[@"sprites"] firstObject] objectForKey:@"resource_uri"];
+    NSString *spriteImageURL = [@"http://pokeapi.co" stringByAppendingString: [[PokeAPI getResponseWithResourceURI:spriteURI] objectForKey:@"image"]];
+    
+    cell.imageView.image = [UIImage imageWithData: [NSData dataWithContentsOfURL:[NSURL URLWithString: spriteImageURL]]];
     
     // Configure the cell...
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
