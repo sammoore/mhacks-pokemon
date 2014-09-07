@@ -7,11 +7,12 @@
 //
 
 #import "FacebookAPI.h"
-#import "PokemapViewController.h"
 
 @implementation FacebookAPI
 
 + (void)getPublicProfile:(id<FBAPIDelegate>)delegate {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    
     [FBRequestConnection startForMeWithCompletionHandler:
      ^(FBRequestConnection *connection, id result, NSError *error) {
          if (!error) {
@@ -26,11 +27,15 @@
          } else {
              NSLog(@"error: %@", error);
          }
+         
+         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
      }];
 }
 
 + (void)getUserFriends:(id<FBAPIDelegate>)delegate
 {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    
     [FBRequestConnection startWithGraphPath:@"me/friends" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if(!error) {
             NSLog(@"%@", result);
@@ -43,6 +48,8 @@
         } else {
             NSLog(@"error: %@", error);
         }
+        
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     }];
 }
 

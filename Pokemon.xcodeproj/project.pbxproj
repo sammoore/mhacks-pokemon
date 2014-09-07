@@ -38,6 +38,7 @@
 		22A9E5C919BB13E6003194FF /* PokedexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5C819BB13E6003194FF /* PokedexViewController.m */; };
 		22A9E5CB19BB2F28003194FF /* pokedex.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E5CA19BB2F28003194FF /* pokedex.json */; };
 		22A9E5D219BBCC16003194FF /* FacebookAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5D119BBCC16003194FF /* FacebookAPI.m */; };
+		22A9E5D819BBFFAE003194FF /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5D719BBFFAE003194FF /* FriendsTableViewController.m */; };
 		D053D39F19BB87F400E137B0 /* FacebookLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D053D39E19BB87F400E137B0 /* FacebookLoginViewController.m */; };
 		D053D3A119BB941300E137B0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D053D3A019BB941300E137B0 /* FacebookSDK.framework */; };
 		D053D3A319BBA24400E137B0 /* FirebaseSimpleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D053D3A219BBA24400E137B0 /* FirebaseSimpleLogin.framework */; };
@@ -103,6 +104,8 @@
 		22A9E5CA19BB2F28003194FF /* pokedex.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pokedex.json; sourceTree = "<group>"; };
 		22A9E5D019BBCC16003194FF /* FacebookAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookAPI.h; sourceTree = "<group>"; };
 		22A9E5D119BBCC16003194FF /* FacebookAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookAPI.m; sourceTree = "<group>"; };
+		22A9E5D619BBFFAE003194FF /* FriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewController.h; sourceTree = "<group>"; };
+		22A9E5D719BBFFAE003194FF /* FriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewController.m; sourceTree = "<group>"; };
 		D053D39D19BB87F400E137B0 /* FacebookLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookLoginViewController.h; sourceTree = "<group>"; };
 		D053D39E19BB87F400E137B0 /* FacebookLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookLoginViewController.m; sourceTree = "<group>"; };
 		D053D3A019BB941300E137B0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				22A9E59B19BAC070003194FF /* RootTabBarViewController.m */,
 				22A9E5C719BB13E6003194FF /* PokedexViewController.h */,
 				22A9E5C819BB13E6003194FF /* PokedexViewController.m */,
+				22A9E5D619BBFFAE003194FF /* FriendsTableViewController.h */,
+				22A9E5D719BBFFAE003194FF /* FriendsTableViewController.m */,
 			);
 			path = Pokemon;
 			sourceTree = "<group>";
@@ -391,6 +396,7 @@
 				22A9E5C219BACCC8003194FF /* USStringWrapper.m in Sources */,
 				22A9E5C419BACCC8003194FF /* Underscore.m in Sources */,
 				22A9E57619BAB7C9003194FF /* AppDelegate.m in Sources */,
+				22A9E5D819BBFFAE003194FF /* FriendsTableViewController.m in Sources */,
 				22A9E5D219BBCC16003194FF /* FacebookAPI.m in Sources */,
 				22A9E5C319BACCC8003194FF /* Underscore+Functional.m in Sources */,
 				D053D39F19BB87F400E137B0 /* FacebookLoginViewController.m in Sources */,

@@ -156,10 +156,11 @@
             </objects>
             <point key="canvasLocation" x="-78" y="306"/>
         </scene>
-        <!--Table View Controller - Nearby-->
+        <!--Friends Table View Controller - Nearby-->
         <scene sceneID="BhB-gv-ac0">
             <objects>
-                <tableViewController id="jO9-Y2-rZz" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaW-5T-Amt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="jO9-Y2-rZz" customClass="FriendsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7cW-0I-cNB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,7 +182,6 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Nearby" image="nearby-icon" id="8U3-7c-GYn"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aaW-5T-Amt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="654" y="595"/>
         </scene>
