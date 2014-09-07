@@ -92,10 +92,9 @@
 
 - (IBAction)throwPokeball:(id)sender {
     
-
 }
 
 - (IBAction)runAway:(id)sender {
-    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 @end
