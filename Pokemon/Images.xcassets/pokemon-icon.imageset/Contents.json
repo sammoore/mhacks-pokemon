@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "pokemon-icon-1.png"
+      "filename" : "pokemon-icon.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "pokemon-icon.png"
+      "filename" : "pokemon-icon-1.png"
     }
   ],
   "info" : {

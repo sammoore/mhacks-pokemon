@@ -40,6 +40,7 @@
 		22A9E5D219BBCC16003194FF /* FacebookAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5D119BBCC16003194FF /* FacebookAPI.m */; };
 		22A9E5D819BBFFAE003194FF /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5D719BBFFAE003194FF /* FriendsTableViewController.m */; };
 		22A9E5DB19BC320A003194FF /* PokemonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9E5DA19BC320A003194FF /* PokemonTableViewController.m */; };
+		D0000FA719BC474C007F2CCE /* WildPokemonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0000FA619BC474C007F2CCE /* WildPokemonViewController.m */; };
 		D053D39F19BB87F400E137B0 /* FacebookLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D053D39E19BB87F400E137B0 /* FacebookLoginViewController.m */; };
 		D053D3A119BB941300E137B0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D053D3A019BB941300E137B0 /* FacebookSDK.framework */; };
 		D053D3A319BBA24400E137B0 /* FirebaseSimpleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D053D3A219BBA24400E137B0 /* FirebaseSimpleLogin.framework */; };
@@ -109,6 +110,8 @@
 		22A9E5D719BBFFAE003194FF /* FriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewController.m; sourceTree = "<group>"; };
 		22A9E5D919BC320A003194FF /* PokemonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokemonTableViewController.h; sourceTree = "<group>"; };
 		22A9E5DA19BC320A003194FF /* PokemonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokemonTableViewController.m; sourceTree = "<group>"; };
+		D0000FA519BC474C007F2CCE /* WildPokemonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WildPokemonViewController.h; sourceTree = "<group>"; };
+		D0000FA619BC474C007F2CCE /* WildPokemonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WildPokemonViewController.m; sourceTree = "<group>"; };
 		D053D39D19BB87F400E137B0 /* FacebookLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookLoginViewController.h; sourceTree = "<group>"; };
 		D053D39E19BB87F400E137B0 /* FacebookLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookLoginViewController.m; sourceTree = "<group>"; };
 		D053D3A019BB941300E137B0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -207,6 +210,8 @@
 				22A9E56C19BAB7C9003194FF /* Supporting Files */,
 				22A9E59A19BAC070003194FF /* RootTabBarViewController.h */,
 				22A9E59B19BAC070003194FF /* RootTabBarViewController.m */,
+				D0000FA519BC474C007F2CCE /* WildPokemonViewController.h */,
+				D0000FA619BC474C007F2CCE /* WildPokemonViewController.m */,
 				22A9E5C719BB13E6003194FF /* PokedexViewController.h */,
 				22A9E5C819BB13E6003194FF /* PokedexViewController.m */,
 				22A9E5D619BBFFAE003194FF /* FriendsTableViewController.h */,
@@ -410,6 +415,7 @@
 				22A9E57219BAB7C9003194FF /* main.m in Sources */,
 				22A9E5C119BACCC8003194FF /* Underscore+Strings.m in Sources */,
 				22A9E5C919BB13E6003194FF /* PokedexViewController.m in Sources */,
+				D0000FA719BC474C007F2CCE /* WildPokemonViewController.m in Sources */,
 				22A9E59C19BAC070003194FF /* RootTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
