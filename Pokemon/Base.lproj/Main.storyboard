@@ -217,10 +217,13 @@
                                 <rect key="frame" x="20" y="424" width="146" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Catch">
+                                <state key="normal" title="Throw Pokeball">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="throwPokeball:" destination="rwL-i3-Yay" eventType="touchUpInside" id="Nd2-c1-mvY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRX-XC-Z0t">
                                 <rect key="frame" x="174" y="424" width="126" height="30"/>
@@ -230,6 +233,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="runAway:" destination="rwL-i3-Yay" eventType="touchUpInside" id="Jss-Nz-vxX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0C-bP-10J">
                                 <rect key="frame" x="20" y="142" width="280" height="45"/>
@@ -253,6 +259,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="pokemonImage" destination="vgL-fp-z7O" id="wfl-xw-7Om"/>
+                        <outlet property="pokemonLevel" destination="M9X-9z-2ZR" id="TQc-hU-gy6"/>
+                        <outlet property="pokemonName" destination="N0C-bP-10J" id="wHa-Jf-R8t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ot9-Md-HdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
