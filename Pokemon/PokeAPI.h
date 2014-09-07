@@ -28,6 +28,6 @@
 + (NSDictionary *)getPokemonWithID:(NSUInteger)id;
 
 // This literally gets all the pokemon, around 500 or 700
-+ (NSDictionary *)getPokedex;
++ (NSArray *)getPokedex;
 
 @end

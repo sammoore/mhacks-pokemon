@@ -50,6 +50,10 @@
     [self.tableView reloadData];
 }
 
+- (void)userProfilePictureReceived:(NSDictionary *)userPictureDict
+{
+    
+}
 
 #pragma mark - TableVC overrides
 
