@@ -41,7 +41,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     NSLog(@"got a location update");
-    if (UIApplication.sharedApplication.applicationState == UIApplicationStateActive)
+    if (UIApplication.sharedApplication.applicationState != UIApplicationStateActive)
     {
         UILocalNotification *notif = [[UILocalNotification alloc] init];
         if (notif) {
