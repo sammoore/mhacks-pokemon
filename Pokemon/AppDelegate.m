@@ -10,12 +10,16 @@
 #import <Firebase/Firebase.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import <FirebaseSimpleLogin/FirebaseSimpleLogin.h>
+#import "RootTabBarViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.suchNotif = NO;
+    
     return YES;
 }
 
@@ -26,9 +30,6 @@
     // add any app-specific handling code here
     return wasHandled;
 }
-
-
-
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -44,7 +45,11 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    // Handle launching from a notification
+    if (self.suchNotif != NO) {
+        self.suchNotif = NO;
+        [(RootTabBarViewController *)[[self window] rootViewController] startWildPokemonBattle];
+    }
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

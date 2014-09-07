@@ -200,7 +200,7 @@
         <!--Wild Pokemon View Controller-->
         <scene sceneID="0So-uF-Po3">
             <objects>
-                <viewController id="rwL-i3-Yay" customClass="WildPokemonViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wildPokemon" id="rwL-i3-Yay" customClass="WildPokemonViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hAM-Az-X0z"/>
                         <viewControllerLayoutGuide type="bottom" id="WzS-wX-433"/>
@@ -267,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ot9-Md-HdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="-1522"/>
+            <point key="canvasLocation" x="654" y="-1522"/>
         </scene>
         <!--Battle View Controller-->
         <scene sceneID="L8J-ER-jbT">

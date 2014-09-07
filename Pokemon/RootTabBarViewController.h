@@ -12,6 +12,6 @@
 
 @interface RootTabBarViewController : UITabBarController <CLLocationManagerDelegate>
 
-
+- (void)startWildPokemonBattle;
 
 @end
