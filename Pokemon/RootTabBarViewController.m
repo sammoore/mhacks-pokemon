@@ -36,6 +36,8 @@
 
 #pragma mark - CLLocationManagerDelegate
 
+
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     NSLog(@"got a location update");

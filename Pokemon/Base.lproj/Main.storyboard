@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="672" y="-1522"/>
         </scene>
-        <!--View Controller-->
+        <!--Battle View Controller-->
         <scene sceneID="L8J-ER-jbT">
             <objects>
-                <viewController id="ca9-Tb-Yb7" sceneMemberID="viewController">
+                <viewController id="ca9-Tb-Yb7" customClass="BattleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jlg-51-5wb"/>
                         <viewControllerLayoutGuide type="bottom" id="Pug-vw-Uf3"/>
