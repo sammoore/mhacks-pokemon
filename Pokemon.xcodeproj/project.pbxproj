@@ -343,7 +343,7 @@
 				ORGANIZATIONNAME = sammoore;
 				TargetAttributes = {
 					22A9E56119BAB7C9003194FF = {
-						DevelopmentTeam = Z5AR6RGC9X;
+						DevelopmentTeam = 4ETUTSYY89;
 					};
 					22A9E58219BAB7C9003194FF = {
 						TestTargetID = 22A9E56119BAB7C9003194FF;
