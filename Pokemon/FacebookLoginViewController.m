@@ -76,7 +76,7 @@ static NSString * const kFacebookAppID = @"292571467605819";
     //[self showProgressAlert];
     // login using Facebook
     [self.simpleLogin loginToFacebookAppWithId:kFacebookAppID
-                                   permissions:@[@"email"] //HERE IS WHERE YOU'RE 
+                                   permissions:@[@"public_profile", @"user_friends", @"email"] //HERE IS WHERE YOU'RE
                                       audience:ACFacebookAudienceOnlyMe
                            withCompletionBlock:[self loginBlockForProviderName:@"Facebook"]];
     
